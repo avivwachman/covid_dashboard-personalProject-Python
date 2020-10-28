@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+:root {
+    --font-big: 4rem;
+    --font-big-phone: 3rem;
+    --font-mid: 2.5rem;
+    --font-mid-phone: 2rem;
+    --font-small: 1.8rem;
+
+    --bckg-col: #b8cdd6;
+    --txt-col-black: black;
+}
+
+html {
+    background-color: var(--bckg-col);
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--txt-col-black);
+}
+
+.app {
+    position: relative;
+    min-height: 120vh;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-size: var(--font-big);
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+
+.title_secondary {
+    position: relative;
+    font-size: var(--font-mid);
+    margin-top: 30px;
+}
+
+.card_wrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-row-gap: 30px;
+    justify-items: center;
+
+}
+
+.card {
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 30px;
+    width: 250px;
+    background-color: rgb(248, 250, 252);
+    color: #051937;
+    transition: transform 0.5s;
+}
+
+.good {
+    color: white;
+    background-color: #2e8b57;
+}
+
+.bad {
+    color: white;
+    background-color: #a61212;
+}
+
+.badder {
+    color: #ffffff;
+    background-color: #b81b1b;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+h2 {
+    margin-top: 4px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: var(--font-mid);
+}
+
+.data {
+    margin-bottom: 4px;
+    font-size: var(--font-small);
+}
+
+.data_secondary {
+    font-weight: 500;
+    font-size: var(--font-small);
+}
+
+.foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #386aaf;
+    align-items: center;
+    height: 200px;
+    color: white;
+    margin-top: 20px;
+
+}
+
+.foot p{
+    margin: 0;
+}
+
+.hide{
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.white-image{
+    filter: brightness(0) invert(1);
+}
+
+.first_social{
+    margin-right: 15px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .title {
+        font-size: var(--font-big-phone);
+    }
+
+    .title_secondary {
+        font-size: var(--font-mid-phone);
+
+    }
+    .foot {
+    display: flex;
+    flex-direction: column;
+    }
+}
