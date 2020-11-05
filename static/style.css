@@ -11,6 +11,7 @@
     --font-mid: 2.5rem;
     --font-mid-phone: 2rem;
     --font-small: 1.8rem;
+    --font-small-phone: 1.5rem;
 
     --bckg-col: #b8cdd6;
     --txt-col-black: black;
@@ -25,23 +26,73 @@ body {
     color: var(--txt-col-black);
 }
 
-.app {
-    position: relative;
-    min-height: 120vh;
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
+    background-color: #386aaf;
 }
 
-.title {
-    position: relative;
-    text-align: center;
-    font-size: var(--font-big);
-    margin-top: 80px;
-    margin-bottom: 70px;
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
 }
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--font-small);
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #afb9d0;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.logo {
+    color: white;
+    font-size: var(--font-mid);
+    text-align: center;
+}
+
+.logo_second {
+    font-size: var(--font-small-phone);
+    text-transform: uppercase;
+
+}
+
+.app {
+    position: relative;
+
+}
+
 
 .title_secondary {
     position: relative;
     font-size: var(--font-mid);
     margin-top: 30px;
+}
+
+.chart_title {
+    text-align: center;
+    color: #071833;
+    position: relative;
+    font-size: var(--font-mid);
+    font-weight: 500;
+    margin-top: 45px;
+    margin-bottom: 30px;
 }
 
 .card_wrapper {
@@ -101,6 +152,14 @@ h2 {
     font-size: var(--font-small);
 }
 
+.btn-wrap {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .foot {
     display: flex;
     flex-direction: row;
@@ -113,35 +172,99 @@ h2 {
 
 }
 
-.foot p{
+.foot p {
     margin: 0;
 }
 
-.hide{
+.hide {
     visibility: hidden;
     pointer-events: none;
 }
 
-.white-image{
+.white-image {
     filter: brightness(0) invert(1);
 }
 
-.first_social{
+.first_social {
     margin-right: 15px;
 }
 
+.reorder-me {
+    font-size: var(--font-small);
+    padding: 7px;
+    background-color: transparent;
+    border: 2px solid #082e65;
+    color: #021b3d;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+
+}
+
+
+.reorder-me:hover {
+    background-color: #082e65;
+    color: white;
+    transition: all 0.3s;
+}
+
+.chart-container {
+    position: relative;
+    margin: 10px auto auto;
+    width: 80vw;
+    min-height: 200px;
+}
+
+.casesChart{
+
+}
+
+.deathChart{
+
+}
+
+@media only screen and (max-width: 620px) {
+
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 3px;
+    }
+}
 
 @media only screen and (max-width: 500px) {
     .title {
         font-size: var(--font-big-phone);
+
     }
 
     .title_secondary {
         font-size: var(--font-mid-phone);
 
     }
+
     .foot {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .cool-link:hover::after {
+        width: 0;
+    }
+
+    .cool-link {
+        text-decoration: underline;
+    }
+
+    .reorder-me {
+        padding: 4px;
+        font-size: var(--font-small-phone);
+    }
+
+    .chart_title{
+        font-size: var(--font-mid-phone);
     }
 }
