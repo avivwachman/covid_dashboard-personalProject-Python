@@ -1,3 +1,3 @@
 # covid_dashboard-personalProject-Python
 
-#[Live](http://avivwachman.pythonanywhere.com/)
+[Live](http://avivwachman.pythonanywhere.com/)
